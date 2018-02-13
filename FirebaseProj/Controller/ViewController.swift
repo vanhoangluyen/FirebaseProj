@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var artistNameTextfield: UITextField!
     @IBOutlet var artistGenreTextField: UITextField!
     @IBOutlet var tableView: UITableView!
@@ -89,6 +89,51 @@ class ViewController: UIViewController,UITableViewDataSource {
         cell.textLabel?.text = artistList[indexPath.row].name
         cell.detailTextLabel?.text = artistList[indexPath.row].genre
         return cell
+    }
+    //MARK: - Edit Operation – Firebase Realtime Database
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //getting the selected artist
+        let artist = artistList[indexPath.row]
+        //building an alert
+        let alertController = UIAlertController(title: artist.name, message: "Give new values to update ", preferredStyle: .alert)
+        //the confirm action taking the inputs
+        let confirmAction = UIAlertAction(title: "Enter", style: .default) { (_) in
+            //getting artist id
+            let id = artist.id
+            //getting new values
+            let name = alertController.textFields![0].text
+            let genre = alertController.textFields![1].text
+            //calling the update method to update artist
+            self.updateArtist(id: id!, name: name!, genre: genre!)
+        }
+        //the cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (_) in}
+        //adding two textfields to alert
+        alertController.addTextField(configurationHandler: { (textfield) in
+            textfield.text = artist.name
+        })
+        alertController.addTextField(configurationHandler: { (textfield) in
+            textfield.text = artist.genre
+        })
+        //adding action
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        //presenting dialog
+        present(alertController, animated: true, completion: nil)
+        
+    }
+    //MARK : - Update Operation – Firebase Realtime Database
+    func updateArtist(id: String, name: String, genre : String) {
+        //creating artist with the new given values
+        let artist = [
+            "id": id,
+            "artistName": name,
+            "artistGenre": genre
+        ]
+        //updating the artist using the key of the artist
+        refArtists.child(id).setValue(artist)
+        //displaying message
+        labelMessage.text = "Artist Updated"
     }
 }
 
