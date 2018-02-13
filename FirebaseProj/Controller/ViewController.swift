@@ -103,11 +103,20 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             //getting new values
             let name = alertController.textFields![0].text
             let genre = alertController.textFields![1].text
+            if (name == artist.name || genre == artist.genre ) {
+                self.labelMessage.text = "Nothing To Do"
+            } else {
             //calling the update method to update artist
             self.updateArtist(id: id!, name: name!, genre: genre!)
+            }
         }
         //the cancel action doing nothing
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (_) in}
+        // the delete action
+        let deleteAction = UIAlertAction(title: "Delete", style: .default) { (_) in
+            //Delete artist
+            self.deleteArtist(id: artist.id!)
+        }
         //adding two textfields to alert
         alertController.addTextField(configurationHandler: { (textfield) in
             textfield.text = artist.name
@@ -117,6 +126,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         })
         //adding action
         alertController.addAction(confirmAction)
+        alertController.addAction(deleteAction)
         alertController.addAction(cancelAction)
         //presenting dialog
         present(alertController, animated: true, completion: nil)
@@ -134,6 +144,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         refArtists.child(id).setValue(artist)
         //displaying message
         labelMessage.text = "Artist Updated"
+    }
+    //MARK: - Delete Operation – Firebase Realtime Database
+    func deleteArtist(id: String) {
+        refArtists.child(id).setValue(nil)
+        //Display Message
+        labelMessage.text = "Artist Deleted"
     }
 }
 
