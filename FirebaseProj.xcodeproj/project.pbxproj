@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1898432420E9DD2B00211B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1898432320E9DD2B00211B38 /* GoogleService-Info.plist */; };
 		220806D54B82606B9690C321 /* Pods_FirebaseProjUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94913F56869754D18BE12CA2 /* Pods_FirebaseProjUITests.framework */; };
 		41AF1890B8D1DEF60BA33B74 /* Pods_FirebaseProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D127E9CC24FB0301B2AD32A /* Pods_FirebaseProjTests.framework */; };
 		B826D252203193C00037C83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826D251203193C00037C83B /* AppDelegate.swift */; };
@@ -16,7 +17,6 @@
 		B826D25C203193C00037C83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B826D25A203193C00037C83B /* LaunchScreen.storyboard */; };
 		B826D267203193C00037C83B /* FirebaseProjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826D266203193C00037C83B /* FirebaseProjTests.swift */; };
 		B826D272203193C00037C83B /* FirebaseProjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826D271203193C00037C83B /* FirebaseProjUITests.swift */; };
-		B826D280203194220037C83B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B826D27F203194220037C83B /* GoogleService-Info.plist */; };
 		B85697422031A14500083BDC /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85697412031A14500083BDC /* ArtistModel.swift */; };
 		FDF8110B9B29050072953E45 /* Pods_FirebaseProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EE044D83AEC441AD3AFE72 /* Pods_FirebaseProj.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1898432320E9DD2B00211B38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59EE044D83AEC441AD3AFE72 /* Pods_FirebaseProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C459397432532A4912C6C32 /* Pods-FirebaseProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseProj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseProj/Pods-FirebaseProj.debug.xcconfig"; sourceTree = "<group>"; };
 		82C7D8B6D70E6E34871537EF /* Pods-FirebaseProjUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseProjUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseProjUITests/Pods-FirebaseProjUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		B826D26D203193C00037C83B /* FirebaseProjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseProjUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B826D271203193C00037C83B /* FirebaseProjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProjUITests.swift; sourceTree = "<group>"; };
 		B826D273203193C00037C83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B826D27F203194220037C83B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B85697412031A14500083BDC /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 		CAE6852E0DB5A693FB1A0FF1 /* Pods-FirebaseProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseProj/Pods-FirebaseProj.release.xcconfig"; sourceTree = "<group>"; };
 		CF649BC435B9734CD582D3DE /* Pods-FirebaseProjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseProjUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseProjUITests/Pods-FirebaseProjUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,13 +132,14 @@
 			isa = PBXGroup;
 			children = (
 				B826D251203193C00037C83B /* AppDelegate.swift */,
+				B826D255203193C00037C83B /* Main.storyboard */,
 				B85697432031A14900083BDC /* Model */,
 				B85697442031A14F00083BDC /* View */,
 				B85697452031A15500083BDC /* Controller */,
 				B826D258203193C00037C83B /* Assets.xcassets */,
 				B826D25A203193C00037C83B /* LaunchScreen.storyboard */,
+				1898432320E9DD2B00211B38 /* GoogleService-Info.plist */,
 				B826D25D203193C00037C83B /* Info.plist */,
-				B826D27F203194220037C83B /* GoogleService-Info.plist */,
 			);
 			path = FirebaseProj;
 			sourceTree = "<group>";
@@ -172,7 +173,6 @@
 		B85697442031A14F00083BDC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B826D255203193C00037C83B /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = LuyenBG;
 				TargetAttributes = {
 					B826D24D203193C00037C83B = {
@@ -312,7 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B826D25C203193C00037C83B /* LaunchScreen.storyboard in Resources */,
-				B826D280203194220037C83B /* GoogleService-Info.plist in Resources */,
+				1898432420E9DD2B00211B38 /* GoogleService-Info.plist in Resources */,
 				B826D259203193C00037C83B /* Assets.xcassets in Resources */,
 				B826D257203193C00037C83B /* Main.storyboard in Resources */,
 			);
@@ -564,6 +564,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -571,6 +572,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -621,6 +623,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -628,6 +631,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -665,7 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FirebaseProj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hoangluyen.FirebaseProj;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LuyenMP.FirebaseProj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -680,7 +684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FirebaseProj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hoangluyen.FirebaseProj;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LuyenMP.FirebaseProj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
